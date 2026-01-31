@@ -1,30 +1,31 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
-             schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>jetson_stm32_poc_msgs</name>
+  <name>jetson_stm32_poc</name>
   <version>0.0.0</version>
-  <description>Custom message definitions for Jetson ↔ STM32 POC</description>
+  <description>TODO: Package description</description>
+  <maintainer email="saikiranpr@gmail.com">saikirang</maintainer>
+  <license>TODO: License declaration</license>
 
-  <maintainer email="saikiranpr@gmail.com">saikiran</maintainer>
-  <license>Apache-2.0</license>
+  <!-- Python dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>jetson_stm32_poc_msgs</exec_depend>
+  <exec_depend>python3-serial</exec_depend>
 
-  <!-- Build system -->
-  <buildtool_depend>ament_cmake</buildtool_depend>
-
-  <!-- Message generation -->
+  
+  <!-- Custom message dependency (this package must define Data_Vector message) -->
   <build_depend>rosidl_default_generators</build_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>
-
-  <!-- Required for message packages -->
   <member_of_group>rosidl_interface_packages</member_of_group>
 
-  <!-- Testing (optional) -->
-  <test_depend>ament_lint_auto</test_depend>
-  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <build_type>ament_python</build_type>
   </export>
 </package>
-
